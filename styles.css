@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    position:relative;
+
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/zar2.jpg');
+    background-position: center;
+    background-size:cover;
+    padding:0.8%;
+}
+.content{
+    top:40%;
+    left:20%;
+    position:absolute;
+    text-align: center;   
+}
+.content h1{
+    font-size: 45px;
+    color:rgb(251, 173, 227);
+}
+.content h1 span{
+    color:rgb(214, 84, 136);
+}
+.content {
+    color: aliceblue;
+}
+.end-time{
+    display:flex;
+}
+.end-time div{
+    flex-basis: 100px;
+}
+.end-time div p{
+    font-size: 60px;
+    margin: bottom 50px;
+}

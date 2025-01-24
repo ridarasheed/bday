@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyeux anniversaire zara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>The big <span>2-0</span> coming soon!</h1>
+            <div class="end-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var countDownDate =new Date("jan 26,2025 00:00:00").getTime();
+        var x=setInterval(function(){
+            var now=new Date().getTime();
+            var distance=countDownDate-now;
+            var days= Math.floor(distance/(1000*60*60*24));
+            var hours= Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            var minutes= Math.floor((distance%(1000*60*60))/(1000*60));
+            var seconds=Math.floor((distance%(1000*60))/1000);
+
+            document.getElementById("days").innerHTML=days;
+            document.getElementById("hours").innerHTML=hours;
+            document.getElementById("minutes").innerHTML=minutes;
+            document.getElementById("seconds").innerHTML=seconds;
+
+            if(distance < 0){
+                clearInterval(x);
+                document.getElementById("days").innerHTML="00";
+                document.getElementById("hours").innerHTML="00";
+                document.getElementById("minutes").innerHTML="00";
+                document.getElementById("seconds").innerHTML="00";
+                alert("ITS YOUR BIRTHDAY!");
+                window.location.href="https://www.instagram.com/reel/DEh_CI4gBcz/?igsh=MXJ2d3V3YmVzbnF2sw==";
+            }
+        },1000);
+    </script>
+</body>
+</html>
